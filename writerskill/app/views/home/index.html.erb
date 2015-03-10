@@ -1,0 +1,54 @@
+<h1>Writerskill System</h1>
+
+<b>Last 3 members who have logged in!</b>
+
+<br>
+<% @users.each do |i| %>
+<%= i.firstname %>
+<br>
+<% end %>
+
+<br>
+<br>
+
+<b>Recent events:</b>
+<br>
+
+<% @events.each do |i| %>
+<%= link_to i.name, i %>
+<br>
+<% end %>
+
+
+<br>
+<br>
+
+<div id = "projects">
+
+  <b>Latest Projects</b>
+  <br>
+
+  <% @workshops.each do |w| %>
+    <% if w.eventclass == "Project" %>
+    <%= link_to w.name, w %>
+    <br>
+    <% end %>
+  <% end %>
+
+</div>
+
+<br>
+
+<div id = "workshops">
+
+  <b>Latest Workshops</b>
+  <br>
+
+  <% @workshops.each do |w| %>
+    <% if w.eventclass == "Workshop" %>
+    <%= link_to w.name, w %>
+    <br>
+    <% end %>
+  <% end %>
+
+</div>

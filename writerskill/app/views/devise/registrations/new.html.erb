@@ -1,0 +1,104 @@
+<h2>Sign up for the WriterSkill System</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :idnumber %><br />
+    <%= f.text_field :idnumber, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :middleinitial %><br />
+    <%= f.text_field :middleinitial, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.text_field :year, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :course %><br />
+    <%= f.text_field :course, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthday %><br />
+    <%= f.date_field :birthday, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emergency_person %><br />
+    <%= f.text_field :emergency_person, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :emergency_phone %><br />
+    <%= f.text_field :emergency_phone, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fb_url %><br />
+    <%= f.text_field :fb_url, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :member_status %><br />
+    <%= f.text_field :member_status, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :member_type %><br />
+    <%= f.text_field :member_type, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :points %><br />
+    <%= f.text_field :points, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @validatable %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

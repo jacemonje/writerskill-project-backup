@@ -1,0 +1,39 @@
+<h1>Writerskill Member Dashboard</h1>
+<p>
+
+  <%= @message %>
+
+  <br>
+
+  Hi, <%= current_member.firstname %> <%= current_member.middleinitial %> <%= current_member.lastname %>
+  <br>
+  You have <%= current_member.points %> points.
+
+  <div>
+    Your email is <%= current_member.email %>
+    <br>
+    Your birthday is <%= current_member.birthday %>
+    <br>
+    You live in <%= current_member.address %>
+  </div>
+
+  <div>
+    Your ID Number is <%= current_member.idnumber %>
+    <br>
+    You are <%= current_member.year %> <%= current_member.course %>
+
+  </div>
+
+  <br>
+
+<div>
+
+  Emergency Details:
+  <br>
+  <%= current_member.emergency_person %>
+  <br>
+  <%= current_member.emergency_phone %>
+
+</div>
+
+</p>
